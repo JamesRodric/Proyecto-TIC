@@ -25,7 +25,11 @@ h3 {
 h1 {
  font-family: "Montserrat", sans-serif;
  text-transform: uppercase;
- margin-top: -10px;
+ margin-top: 10px;
+}
+
+#titulo {
+
 }
 
 .invisible {
@@ -54,4 +58,16 @@ body {
   background-image: linear-gradient(#FFB6C1, #FFC0CB);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
   color: #85796b;
+}
+
+.grid > div {
+  cursor: pointer;
+}
+
+img {
+  height: 30%;
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
