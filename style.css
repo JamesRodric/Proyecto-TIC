@@ -1,19 +1,10 @@
 body {
   background-image: url("https://images7.alphacoders.com/108/1085184.jpg");
-  background-size: cover;
-  /*https://prod.liveshare.vsengsaas.visualstudio.com/join?1F4E68665DF0269320C0FFDF998698294C65*/
-}
- /*Caramelos que caen*/
-.container{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
 
-.bubbles{
   
 }
+ 
+
 .grid {
     /*NO CAMBIAR*/
     height: 560px;
