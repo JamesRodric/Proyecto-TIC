@@ -63,8 +63,14 @@ h1 {
   color: #85796b;
 }
 
-.grid > div {
+.grid div {
   cursor: pointer;
+  transition-duration: .2s;
+  transition-property: transform;
+}
+
+.grid div:hover {
+  transform: scale(1.15);
 }
 
 img {
