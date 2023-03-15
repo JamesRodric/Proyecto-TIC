@@ -6,8 +6,7 @@ body {
 }
 
 img {
-  width: 10%;
-
+  width: 70%;
 }
 
 li, a {
@@ -88,9 +87,9 @@ h1 {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(#FFB6C1, #FFC0CB);
+  background-color: rgba(252, 149, 237, 0.62);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
-  color: #85796b;
+  color: white;
 }
  
 
@@ -128,13 +127,38 @@ h1 {
 
 .grid div:hover {
   transform: scale(1.25);
-  border: dashed 2px;
+  outline: dashed 2px;
   border-radius: 10px;
-  cursor: none;
-
 }
 
-.grid:hover {
-  cursor: none;
+footer {
+  background-color: #8014d886;
+  height: 50px;
+  text-align: center;
+  color: orange;
 }
 
+.animate {
+  animation: girar linear 1s;
+}
+
+@keyframes girar {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: rotate(20deg) scale(1.2);
+  }
+  40% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  60% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+  80% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
