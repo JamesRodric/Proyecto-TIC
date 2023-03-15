@@ -9,7 +9,8 @@ img {
   width: 70%;
 }
 
-li, a {
+li,
+a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
   font-size: 25px;
@@ -31,48 +32,53 @@ header {
 }
 
 .myButton {
-  color: rgb(255, 255, 255); 
-  font-size: 16px; 
-  line-height: 16px; 
-  padding: 6px; 
-  border-radius: 10px; 
-  font-family: "Arial Black", Gadget, sans-serif; 
-  font-weight: 700; 
-  text-decoration: none solid rgb(68, 68, 68); 
-  font-style: normal; font-variant: normal; 
-  text-transform: uppercase; background-image: linear-gradient(45deg, rgb(216, 190, 20) 0%, rgb(255, 149, 245) 100%); 
-  box-shadow: rgba(94, 94, 94, 0.96) 9px 10px 20px 0px; 
-  border: 10px ridge rgba(252, 149, 237, 0.62); 
-  display: inline-block;}
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 16px;
+  padding: 6px;
+  border-radius: 10px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  background-image: linear-gradient(45deg, rgb(216, 190, 20) 0%, rgb(255, 149, 245) 100%);
+  box-shadow: rgba(94, 94, 94, 0.96) 9px 10px 20px 0px;
+  border: 10px ridge rgba(252, 149, 237, 0.62);
+  display: inline-block;
+}
 
 .myButton:hover {
-  background: #D8BE14; }
+  background: #D8BE14;
+}
 
 .myButton:active {
-  background: #FF95F5; }
+  background: #FF95F5;
+}
 
 h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
- }
- 
+}
+
 h1 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   margin-top: 10px;
- }
+}
 
- .title {
-  color: rgb(255, 255, 255); 
-  font-size: 46px; 
-  line-height: 16px; 
-  padding: 6px; 
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 46px;
+  line-height: 16px;
+  padding: 6px;
   font-weight: 700;
   margin-top: auto;
   margin-bottom: auto;
- }
+}
 
- .score-board {
+.score-board {
   background-color: pink;
   border-radius: 10px;
   margin-top: 20px;
@@ -91,27 +97,27 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
   color: white;
 }
- 
+
 
 .grid {
-    /*NO CAMBIAR*/
-    height: 572px;
-    min-width: 572px;
-    max-width: 572px;
-    display: flex;
-    flex-wrap: wrap;
-    padding:10px;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(14, 13, 13, 0.5) inset, 0 1px 0 #fff;
-    /*NO CAMBIAR*/
-    
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    background: rgba(255, 192, 203, 0.795);
-    outline: 10px ridge rgba(252,149,237,1);
-    outline-offset: 0px;
-    margin-bottom: 100px;
+  /*NO CAMBIAR*/
+  height: 572px;
+  min-width: 572px;
+  max-width: 572px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(14, 13, 13, 0.5) inset, 0 1px 0 #fff;
+  /*NO CAMBIAR*/
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background: rgba(255, 192, 203, 0.795);
+  outline: 10px ridge rgba(252, 149, 237, 1);
+  outline-offset: 0px;
+  margin-bottom: 100px;
 }
 
 .grid div {
@@ -122,7 +128,7 @@ h1 {
   cursor: pointer;
   transition-duration: .2s;
   transition-property: transform;
-  
+
 }
 
 .grid div:hover {
@@ -146,18 +152,23 @@ footer {
   0% {
     transform: scale(1);
   }
+
   20% {
     transform: rotate(20deg) scale(1.2);
   }
+
   40% {
     transform: rotate(0deg) scale(1.2);
   }
+
   60% {
     transform: rotate(-20deg) scale(1.2);
   }
+
   80% {
     transform: rotate(0deg) scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
