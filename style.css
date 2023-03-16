@@ -126,10 +126,8 @@ h1 {
   height: 70px;
   width: 70px;
   /*NO CAMBIAR*/
-  cursor: pointer;
   transition-duration: .2s;
   transition-property: transform;
-
 }
 
 .grid div:hover {

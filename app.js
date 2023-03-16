@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentRowMatrix = [];
   let currentColumnMatrix = [];
 
+  document.addEventListener("dragstart", function( event ) {
+    var img = new Image();
+    img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
+    event.dataTransfer.setDragImage(img, 0, 0);
+}, false);
+
+document.addEventListener("dragover", (event) => {
+  event.preventDefault();
+});
+
   const numbers = {
     "0": 56,
     "1": 48,
