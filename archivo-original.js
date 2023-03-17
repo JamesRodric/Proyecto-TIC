@@ -7,16 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentRowMatrix = [];
   let currentColumnMatrix = [];
 
-  document.addEventListener("dragstart", function (event) {
-    var img = new Image();
-    img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
-    event.dataTransfer.setDragImage(img, 0, 0);
-  }, false);
-
-  document.addEventListener("dragover", (event) => {
-    event.preventDefault();
-  });
-
   const numbers = {
     "0": 56,
     "1": 48,
@@ -219,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
       newArray.push(rowArray.slice(i, i + 8))
     }
     currentRowMatrix = [...newArray];
+    console.log(currentRowMatrix);
     const pairsCords = [];
     //x = fila;
     //i = columna;
@@ -281,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
       newColumnArray.push(column.reverse());
     }
     currentColumnMatrix = [...newColumnArray];
+    console.log(currentColumnMatrix);
 
     const pairsCordsColumn = [];
 
@@ -335,91 +327,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    console.log(possibleColumn);
+
     // i = numbers[(n % 8).toString()] + Math.trunc(n / 8); 
 
     possibleColumn.forEach(x => {
       possible.push([columnConversion(x[0]), columnConversion(x[1]), columnConversion(x[2])])
     });
-
-
-    const pairsBetween = [];
-
-    for (let x = 0; x < currentRowMatrix.length; x++) {
-      for (let i = 0; i < 8; i++) {
-        if (currentRowMatrix[x][i] === currentRowMatrix[x][i + 2]) {
-          pairsBetween.push([{
-            x: x + 1,
-            y: i,
-            element: currentRowMatrix[x][i],
-            number: 8 * (x) + i
-          }, {
-            x: x + 1,
-            y: i + 2,
-            number: 8 * (x) + i + 2
-          }])
-        }
-      }
-    }
-
-    for (pair of pairsBetween) {
-      const row = pair[0].x;
-      const y = pair[0].y;
-      const upRow = currentRowMatrix[row - 2];
-      const downRow = currentRowMatrix[row];
-      if (pair[0].element === undefined) continue;
-      if (upRow && upRow[y + 1] === pair[0].element) {
-        possible.push([pair[0].number - 7, pair[0].number, pair[1].number])
-      }
-      if (downRow && downRow[y + 1] === pair[0].element) {
-        possible.push([pair[0].number + 9, pair[0].number, pair[1].number])
-      }
-    }
-
-
-
-    const pairsBetweenColumn = [];
-
-
-
-
-    for (let x = 0; x < currentColumnMatrix.length; x++) {
-      for (let i = 0; i < 8; i++) {
-        if (currentColumnMatrix[x][i] === currentColumnMatrix[x][i + 2]) {
-          pairsBetweenColumn.push([{
-            x: x + 1,
-            y: i,
-            element: currentColumnMatrix[x][i],
-            number: 8 * (x) + i
-          }, {
-            x: x + 1,
-            y: i + 2,
-            number: 8 * (x) + i + 2
-          }])
-        }
-      }
-    }
-
-    const possibleColumnBetween = [];
-
-    for (pair of pairsBetweenColumn) {
-      const row = pair[0].x;
-      const y = pair[0].y;
-      const upRow = currentColumnMatrix[row - 2];
-      const downRow = currentColumnMatrix[row];
-      if (pair[0].element === undefined) continue;
-      if (upRow && upRow[y + 1] === pair[0].element) {
-        possibleColumnBetween.push([pair[0].number - 7, pair[0].number, pair[1].number])
-      }
-      if (downRow && downRow[y + 1] === pair[0].element) {
-        possibleColumnBetween.push([pair[0].number + 9, pair[0].number, pair[1].number])
-      }
-    }
-
-    possibleColumnBetween.forEach(x => {
-      possible.push([columnConversion(x[0]), columnConversion(x[1]), columnConversion(x[2])])
-    });
-
-
 
     if (possible.length > 0) {
       const one = possible[Math.floor(Math.random() * possible.length)];
