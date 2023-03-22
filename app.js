@@ -36,11 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
     'url(images/blue-candy.png)'
   ]
 
-  document.addEventListener("dragstart", function( event ) {
+    document.addEventListener("dragstart", function( event ) {
     var img = new Image();
     img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
     event.dataTransfer.setDragImage(img, 0, 0);
 }, false);
+
+document.addEventListener("dragover", (event) => {
+  event.preventDefault();
+});
+
   
   //create your board
   function createBoard() {
